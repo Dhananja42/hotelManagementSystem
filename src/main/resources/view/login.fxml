@@ -10,10 +10,11 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="root" prefHeight="333.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.LoginController">
+<AnchorPane fx:id="root" prefHeight="333.0" prefWidth="600.0" style="-fx-background-color: #2A629A; -fx-background-radius: 0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.LoginController">
    <opaqueInsets>
       <Insets />
    </opaqueInsets>
@@ -23,11 +24,6 @@
             <Image url="@../../../../../../Downloads/360_F_119115529_mEnw3lGpLdlDkfLgRcVSbFRuVl6sMDty.jpg" />
          </image>
       </ImageView>
-      <Text fill="#211781" layoutX="249.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN">
-         <font>
-            <Font name="System Bold" size="33.0" />
-         </font>
-      </Text>
       <Label layoutX="50.0" layoutY="126.0" text="User Name">
          <font>
             <Font size="15.0" />
@@ -50,7 +46,19 @@
          </opaqueInsets>
       </TextField>
       <PasswordField fx:id="password" layoutX="148.0" layoutY="177.0" promptText="password" />
-      <Button layoutX="249.0" layoutY="222.0" mnemonicParsing="false" onAction="#login" text="Login" textFill="#564141" textOverrun="CLIP" />
-      <Button layoutX="179.0" layoutY="222.0" mnemonicParsing="false" onAction="#loginSignupbutton" text="Signup" textFill="#96b74f" textOverrun="CLIP" />
+      <Button layoutX="249.0" layoutY="222.0" mnemonicParsing="false" onAction="#login" style="-fx-background-radius: 25;" text="Login" textFill="#564141" textOverrun="CLIP" />
+      <Button layoutX="179.0" layoutY="222.0" mnemonicParsing="false" onAction="#loginSignupbutton" style="-fx-background-radius: 25;" text="Signup" textFill="#1f2b07" textOverrun="CLIP" />
+      <Pane layoutX="213.0" layoutY="7.0" prefHeight="42.0" prefWidth="158.0" style="-fx-background-radius: 25; -fx-background-color: #240750;">
+         <children>
+            <Text fill="#7f7d96" layoutX="36.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Narrow Bold" size="33.0" />
+               </font>
+            </Text>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Pane>
    </children>
 </AnchorPane>

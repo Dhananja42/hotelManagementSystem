@@ -1,12 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.CustomerController">
+<AnchorPane prefHeight="534.0" prefWidth="666.0" style="-fx-background-color: #7AB2B2;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.CustomerController">
    <children>
-      <TextField fx:id="text" layoutX="167.0" layoutY="81.0" />
-      <Button layoutX="190.0" layoutY="151.0" mnemonicParsing="false" onAction="#testOnAction" text="Button" />
+      <Pane layoutX="269.0" layoutY="14.0" prefHeight="34.0" prefWidth="128.0" style="-fx-background-color: #4D869C; -fx-background-radius: 25;">
+         <children>
+            <Label layoutX="30.0" layoutY="7.0" text="Customer">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="24.0" layoutY="98.0" prefHeight="34.0" prefWidth="110.0" style="-fx-background-color: #4D869C; -fx-background-radius: 25;" text="         Name" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="161.0" prefHeight="34.0" prefWidth="110.0" style="-fx-background-color: #4D869C; -fx-background-radius: 25;" text="          NIC" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="223.0" prefHeight="34.0" prefWidth="110.0" style="-fx-background-color: #4D869C; -fx-background-radius: 25;" text="       Check in" textAlignment="RIGHT">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="288.0" prefHeight="34.0" prefWidth="110.0" style="-fx-background-color: #4D869C; -fx-background-radius: 25;" text="     Check out" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="167.0" layoutY="102.0" prefHeight="26.0" prefWidth="175.0" />
+      <TextField fx:id="nic" layoutX="167.0" layoutY="165.0" prefHeight="26.0" prefWidth="175.0" />
+      <DatePicker fx:id="checkin" layoutX="167.0" layoutY="227.0" onAction="#inaction" />
+      <DatePicker fx:id="checkout" layoutX="167.0" layoutY="292.0" onAction="#outaction" />
+      <RadioButton fx:id="duluxe" layoutX="159.0" layoutY="345.0" mnemonicParsing="false" text="Deluxe">
+         <toggleGroup>
+            <ToggleGroup fx:id="roomid" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="superior" layoutX="262.0" layoutY="345.0" mnemonicParsing="false" text="Superior" toggleGroup="$roomid" />
+      <ComboBox fx:id="cmbRoomId" layoutX="159.0" layoutY="382.0" prefWidth="150.0" />
+      <Label fx:id="roomnum" layoutX="24.0" layoutY="377.0" prefHeight="34.0" prefWidth="110.0" style="-fx-background-color: #4D869C; -fx-background-radius: 25;" text="  Room number" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="397.0" layoutY="399.0" mnemonicParsing="false" onAction="#customerok" text="OK" />
+      <TableView fx:id="ctable" layoutX="362.0" layoutY="115.0" prefHeight="200.0" prefWidth="298.0" stylesheets="@../style/style.css">
+        <columns>
+          <TableColumn fx:id="colCustomerId" prefWidth="52.800048828125" text="name" />
+          <TableColumn fx:id="colCustomerNIC" prefWidth="43.2000732421875" text="NIC" />
+            <TableColumn fx:id="colCheckingDate" prefWidth="95.99996948242188" text="Checkin Date" />
+            <TableColumn fx:id="colCheckout" prefWidth="108.79998779296875" text="check out" />
+            <TableColumn prefWidth="75.0" text="NIC" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

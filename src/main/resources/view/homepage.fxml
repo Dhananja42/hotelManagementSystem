@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="homee" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.HomePageController">
+   <children>
+      <ImageView fitHeight="420.0" fitWidth="603.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Asess/leisure-beautiful-health-garden-landscape.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="202.0" layoutY="83.0" opacity="0.78" prefHeight="278.0" prefWidth="200.0" style="-fx-background-color: #003285; -fx-background-radius: 35;">
+         <children>
+            <Button layoutX="66.0" layoutY="31.0" mnemonicParsing="false" onAction="#homecustomer" style="-fx-background-color: #32012F; -fx-background-radius: 25;" text="Customer" textFill="#ececec">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="66.0" layoutY="77.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #32012F; -fx-background-radius: 25;" text="Booking" textFill="#ececec">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="66.0" layoutY="120.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #32012F; -fx-background-radius: 25;" text="View Bills" textFill="#ececec">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="243.0" layoutY="14.0" prefHeight="30.0" prefWidth="118.0" style="-fx-background-color: #003285; -fx-background-radius: 25;">
+         <children>
+            <Label layoutX="35.0" layoutY="4.0" text="HOME" textFill="#46c92b">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
